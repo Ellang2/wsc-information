@@ -1,11 +1,44 @@
 <!doctype html>
-<html>
+<html lang="ko">
 <head>
   <title>월광알리미</title>
   <div style="width:200px; height:50px; border:1px float:left;">
     <a href="index.html" title= "로고를 누르면 메인 페이지로 이동합니다.">
     <img src="logo2.png" width=100%> </a>
     </div>
+
+<div style="float:right">
+  <h3>수능 보기까지 </h3>
+    <h1>
+    <p id="demo"></p>
+    <meta charset="utf-8">
+    <script>
+    var countDownDate = new Date("November 18, 2021 00:01").getTime();
+
+    var x = setInterval(function() {
+
+      var now = new Date("June 4 2021 17:44").getTime();
+
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("demo").innerHTML = days + " 일 "
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+    </script>
+    </h1>
+
+  </div>
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
 
 <style>
   div float:left
@@ -24,9 +57,13 @@
   <div class="box1"></div>
   <div class="box2"></div>
 
+  <meta charset="utf-8">
+
   </head>
+
+  <body>
 <h1>월광 알리미 </h1>
-  <div style="float:right"
+  <div style="float:right">
   <form>
     <input type="datetime-local" id='currentDatetime'/>
   </form>
@@ -36,7 +73,7 @@
   </script>
   </div>
 <div class="box1">
- <a href="05-31.html"> <img src="급식표.jpg" width="100%"> </a>
+ <a href="06-07.html"> <img src="급식표.jpg" width="100%"> </a>
 </div>
 
  <div class="box2">
@@ -46,3 +83,4 @@
  <div class="box2">
    <a href="weekend timetable.html"> <img src="주말시간표.jpg" width="100%"> </a>
    </div>
+ </body>
