@@ -1,1 +1,1 @@
-# wsc-information
+# wcs
